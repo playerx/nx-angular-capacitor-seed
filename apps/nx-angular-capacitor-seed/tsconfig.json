@@ -1,7 +1,21 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "types": ["node", "jest"]
+    "outDir": "../../dist/out-tsc",
+    "types": [
+      "node",
+      "jest"
+    ]
   },
-  "include": ["**/*.ts"]
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "src/test-setup.ts",
+    "**/*.spec.ts",
+    "**/*.stories.ts"
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": true
+  }
 }
