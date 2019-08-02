@@ -1,0 +1,19 @@
+{
+  "extends": "../apps/nx-angular-capacitor-seed/tsconfig.app.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "../apps/**/*.spec.ts",
+    "../libs/**/*.spec.ts"
+  ],
+  "include": [
+    "../apps/**/*",
+    "../libs/**/*"
+  ],
+  "files": [
+    "./typings.d.ts"
+  ]
+}
