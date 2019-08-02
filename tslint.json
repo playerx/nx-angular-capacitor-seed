@@ -28,8 +28,8 @@
         ]
       }
     ],
-    "no-arg": true,
     "semicolon": false,
+    "no-arg": true,
     "no-bitwise": true,
     "no-console": [
       true,

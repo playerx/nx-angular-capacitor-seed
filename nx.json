@@ -13,6 +13,9 @@
     },
     "nx-angular-capacitor-seed": {
       "tags": []
+    },
+    "components": {
+      "tags": []
     }
   }
 }

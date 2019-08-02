@@ -26,9 +26,7 @@
               "apps/nx-angular-capacitor-seed/src/favicon.ico",
               "apps/nx-angular-capacitor-seed/src/assets"
             ],
-            "styles": [
-              "apps/nx-angular-capacitor-seed/src/styles.scss"
-            ],
+            "styles": ["apps/nx-angular-capacitor-seed/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -95,6 +93,37 @@
             "tsConfig": "apps/nx-angular-capacitor-seed/tsconfig.spec.json",
             "setupFile": "apps/nx-angular-capacitor-seed/src/test-setup.ts"
           }
+        }
+      }
+    },
+    "components": {
+      "projectType": "library",
+      "root": "libs/components",
+      "sourceRoot": "libs/components/src",
+      "prefix": "nx-angular-capacitor-seed",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/components/tsconfig.lib.json",
+              "libs/components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/components/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/components/jest.config.js",
+            "tsConfig": "libs/components/tsconfig.spec.json",
+            "setupFile": "libs/components/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }
