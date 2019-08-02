@@ -1,0 +1,18 @@
+{
+  "npmScope": "nx-angular-capacitor-seed",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "nx-angular-capacitor-seed-e2e": {
+      "tags": []
+    },
+    "nx-angular-capacitor-seed": {
+      "tags": []
+    }
+  }
+}

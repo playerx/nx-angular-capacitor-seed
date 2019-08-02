@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "nxAngularCapacitorSeed",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "nx-angular-capacitor-seed",
+      "kebab-case"
+    ]
+  }
+}
