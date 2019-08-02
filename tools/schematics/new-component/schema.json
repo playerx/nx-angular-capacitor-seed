@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "new-component",
+  "type": "object",
+  "description": "New component with stories",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "project": {
+      "type": "string",
+      "description": "Project",
+      "completion": "projects",
+      "$default": {
+        "$source": "projectName"
+      }
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
