@@ -1,148 +1,128 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "",
-  "projects": {
-    "nx-angular-capacitor-seed": {
-      "projectType": "application",
-      "schematics": {
-        "@nrwl/workspace:component": {
-          "style": "scss"
-        }
-      },
-      "root": "apps/nx-angular-capacitor-seed",
-      "sourceRoot": "apps/nx-angular-capacitor-seed/src",
-      "prefix": "nx-angular-capacitor-seed",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/nx-angular-capacitor-seed",
-            "index": "apps/nx-angular-capacitor-seed/src/index.html",
-            "main": "apps/nx-angular-capacitor-seed/src/main.ts",
-            "polyfills": "apps/nx-angular-capacitor-seed/src/polyfills.ts",
-            "tsConfig": "apps/nx-angular-capacitor-seed/tsconfig.app.json",
-            "assets": [
-              "apps/nx-angular-capacitor-seed/src/favicon.ico",
-              "apps/nx-angular-capacitor-seed/src/assets"
-            ],
-            "styles": ["apps/nx-angular-capacitor-seed/src/styles.scss"],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/nx-angular-capacitor-seed/src/environments/environment.ts",
-                  "with": "apps/nx-angular-capacitor-seed/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "nx-angular-capacitor-seed:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "nx-angular-capacitor-seed:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "nx-angular-capacitor-seed:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/nx-angular-capacitor-seed/tsconfig.app.json",
-              "apps/nx-angular-capacitor-seed/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/nx-angular-capacitor-seed/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/nx-angular-capacitor-seed/jest.config.js",
-            "tsConfig": "apps/nx-angular-capacitor-seed/tsconfig.spec.json",
-            "setupFile": "apps/nx-angular-capacitor-seed/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "components": {
-      "projectType": "library",
-      "root": "libs/components",
-      "sourceRoot": "libs/components/src",
-      "prefix": "nx-angular-capacitor-seed",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/components/tsconfig.lib.json",
-              "libs/components/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/components/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/components/jest.config.js",
-            "tsConfig": "libs/components/tsconfig.spec.json",
-            "setupFile": "libs/components/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    }
-  },
-  "cli": {
-    "warnings": {
-      "typescriptMismatch": false,
-      "versionMismatch": false
-    },
-    "defaultCollection": "@nrwl/angular"
-  },
-  "schematics": {
-    "@nrwl/angular:application": {
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
-    }
-  },
-  "defaultProject": "nx-angular-capacitor-seed"
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"newProjectRoot": "",
+	"projects": {
+		"nx-angular-capacitor-seed": {
+			"projectType": "application",
+			"schematics": {
+				"@nrwl/workspace:component": {
+					"style": "scss"
+				}
+			},
+			"root": "apps/nx-angular-capacitor-seed",
+			"sourceRoot": "apps/nx-angular-capacitor-seed/src",
+			"prefix": "nx-angular-capacitor-seed",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-angular:browser",
+					"options": {
+						"outputPath": "dist/apps/nx-angular-capacitor-seed",
+						"index": "apps/nx-angular-capacitor-seed/src/index.html",
+						"main": "apps/nx-angular-capacitor-seed/src/main.ts",
+						"polyfills": "apps/nx-angular-capacitor-seed/src/polyfills.ts",
+						"tsConfig": "apps/nx-angular-capacitor-seed/tsconfig.json",
+						"assets": [
+							"apps/nx-angular-capacitor-seed/src/favicon.ico",
+							"apps/nx-angular-capacitor-seed/src/assets"
+						],
+						"styles": [
+							"apps/nx-angular-capacitor-seed/src/styles.scss"
+						],
+						"scripts": []
+					},
+					"configurations": {
+						"production": {
+							"fileReplacements": [
+								{
+									"replace": "apps/nx-angular-capacitor-seed/src/environments/environment.ts",
+									"with": "apps/nx-angular-capacitor-seed/src/environments/environment.prod.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"extractCss": true,
+							"namedChunks": false,
+							"aot": true,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "2mb",
+									"maximumError": "5mb"
+								}
+							]
+						}
+					}
+				},
+				"serve": {
+					"builder": "@angular-devkit/build-angular:dev-server",
+					"options": {
+						"browserTarget": "nx-angular-capacitor-seed:build"
+					},
+					"configurations": {
+						"production": {
+							"browserTarget": "nx-angular-capacitor-seed:build:production"
+						}
+					}
+				},
+				"extract-i18n": {
+					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"options": {
+						"browserTarget": "nx-angular-capacitor-seed:build"
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"apps/nx-angular-capacitor-seed/tsconfig.json",
+						],
+						"exclude": [
+							"**/node_modules/**",
+							"!apps/nx-angular-capacitor-seed/**"
+						]
+					}
+				}
+			}
+		},
+		"components": {
+			"projectType": "library",
+			"root": "libs/components",
+			"sourceRoot": "libs/components/src",
+			"prefix": "nx-angular-capacitor-seed",
+			"architect": {
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"libs/components/tsconfig.lib.json",
+							"libs/components/tsconfig.spec.json"
+						],
+						"exclude": [
+							"**/node_modules/**",
+							"!libs/components/**"
+						]
+					}
+				}
+			},
+			"schematics": {
+				"@nrwl/angular:component": {
+					"styleext": "scss"
+				}
+			}
+		}
+	},
+	"cli": {
+		"warnings": {
+			"typescriptMismatch": false,
+			"versionMismatch": false
+		},
+		"defaultCollection": "@nrwl/angular"
+	},
+	"schematics": {},
+	"defaultProject": "nx-angular-capacitor-seed"
 }
